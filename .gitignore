@@ -1,0 +1,6 @@
+/log/*
+/tmp/*
+/shared/*
+/public/assets/*
+config/database.yml
+*.sw*

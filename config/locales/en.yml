@@ -1,0 +1,55 @@
+en:
+  api:
+    authentication_success: "You have successfully authenticated"
+    authentication_failure: "Authentication Failure"
+    unauthorized: "Unauthorized: Access is denied due to invalid credentials."
+    unexpected_failure: "Unexpected Failure"
+  venue:
+    show_failed: "Couldn't find the venue details with id '%{id}'"
+    create: "Venue details was saved successfully"
+    create_failed: "Couldn't save the venue details. Kindly look at the errors"
+    update: "Venue details was saved successfully"
+    update_failed: "Couldn't save the venue details. Kindly look at the errors"
+    destroy: "Venue details was removed successfully"
+    destroy_failed: "Couldn't find the venue details with id '%{id}'"
+    destroy_failed_meeting_rooms_not_blank: "Venue can't be deleted if the meeting rooms are present"
+  meeting_room:
+    show_failed: "Couldn't find the Meeting Room details with id '%{id}'"
+    create: "Meeting Room details was saved successfully"
+    create_failed: "Couldn't save the Meeting Room details. Kindly look at the errors"
+    update: "Meeting Room details was saved successfully"
+    update_failed: "Couldn't save the Meeting Room details. Kindly look at the errors"
+    destroy: "Meeting Room details was removed successfully"
+    destroy_failed: "Couldn't find the Meeting Room details with id '%{id}'"
+    blank: "Metting Room details can't be blank"
+  invitation:
+    show_failed: "Couldn't find the Invitation details with id '%{id}'"
+    create: "Invitation sent successfully"
+    create_failed: "Couldn't send the Invitations. Kindly look at the errors"
+    update: "Invitation was updated successfully"
+    update_failed: "Couldn't update the Invitation. Kindly look at the errors"
+    destroy: "Invitation was removed successfully"
+    destroy_failed: "Couldn't find the Invitation details with id '%{id}'"  
+
+  activerecord:
+    errors:
+      models:
+        meeting:
+          attributes:
+            name:
+              blank: 'Meeting name should not be blank'
+            to_time:
+              invalid_to_time: 'Invalid to_time format'
+              blank: 'To time can not be blank'
+            from_time:
+              invalid_from_time: 'Invalid from_time format'
+              blank: 'From time can not be blank'
+              on_or_after: 'Time should be greater than present time to schedule a meeting for today'
+            date:
+              invalid_date: 'Invalid date format'
+              blank: 'Date can not be blank'
+              on_or_after: 'Meeting cannot be created for the past'
+            description:
+              blank: 'Description can not be blank'
+            meeting_room_id:
+              blank: 'Select a meeting room'

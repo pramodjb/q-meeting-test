@@ -1,0 +1,21 @@
+db:
+  image: postgres
+  ports:
+    - "5432"
+
+gembox:
+  image: busybox
+  volumes:
+    - /box
+
+app:
+  build: .
+  command: /usr/bin/start-server
+  volumes:
+    - .:/rails_app
+  volumes_from:
+    - gembox
+  links:
+    - db
+  ports:
+    - "100:80"
